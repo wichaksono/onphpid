@@ -5,12 +5,12 @@ ini bukanlah framework. onphpid simple-web-struktur hanyalah template direktori 
 sebuah website
 <br>
 #struktur
--admin
--assets
--includes
--themes
--index.php
--load.php
--config.php
--pages.php
--.htaccess
+-admin <br>
+-assets<br>
+-includes<br>
+-themes<br>
+-index.php<br>
+-load.php<br>
+-config.php<br>
+-pages.php<br>
+-.htaccess<br>
