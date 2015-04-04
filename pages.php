@@ -10,14 +10,11 @@ if( !defined('index') ) { die('Halaman Di lindungi'); }
 
 /** Halaman Visitor*/
 $pages['themes'] = array(
-	'index'  =>'index.php',
 	'sample' =>'sample.php'
 	);
 
 /** Halaman Admin*/
-$pages['admin']  = array(
-	'dashboard' => 'dashboard.php',
-	);
+$pages['admin']  = array();
 
 
 return $pages;

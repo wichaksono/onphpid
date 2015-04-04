@@ -33,9 +33,9 @@ if( !file_exists( BASEDIR . '/config.php' ) ) { die('Maaf, File Config.php tidak
 	require BASEDIR . '/config.php';
 
 	# pengecekan value pada varible dari file config.php
-	if( empty($dbhost) ) die('$dbhost tidak boleh kosong');	
-	if( empty($dbuser) ) die('$dbuser tidak boleh kosong');	
-	if( empty($dbname) ) die('$dbname tidak boleh kosong');
+	if( empty($dbhost) ){ die('$dbhost tidak boleh kosong');}	
+	if( empty($dbuser) ){ die('$dbuser tidak boleh kosong');}
+	if( empty($dbname) ){ die('$dbname tidak boleh kosong');}
 
 	# menghapus slash paling kanan $url
 	$url = rtrim($url,'/');
@@ -52,3 +52,18 @@ if( $koneksi->connect_error )
 {
 	die( 'Oops Terjadi Kesalahan :' .$koneksi->connect_error );
 }	
+
+/** 
+ * Librari 
+ * nama file dan class diharuskan sama, agar class dapat dipanggil
+ */
+function __autoload($class_name)
+{	
+	$filename = INC . '/libs/'.$class_name .'.php';
+	if( ! file_exists($filename) ) { die(' Class '. $class_name .' tidak ditemukan'); }
+	require $filename;
+}
+
+/** fungsi clean url*/
+require INC . '/clean.url.php';
+?>

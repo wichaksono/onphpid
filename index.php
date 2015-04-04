@@ -17,4 +17,5 @@ define('index', 'boleh akses');
 require 'load.php';
 
 require INC . '/nav.php';
+
 ?>

@@ -3,11 +3,8 @@
 if( !defined('index') ) { die('Halaman Di lindungi'); }
 
 # rule halaman
-$pages 	 = require BASEDIR . '/pages.php';
-
+$page    = get_param();
 $admin   = $pages['admin'];
-
-$page    = ( isset($_GET['page']) && $_GET['page'] !== '' ) ? $_GET['page'] : 'dashboard';
 
 # jika halaman yang dimaksud ada
 if( in_array($page, array_keys($admin)) )
@@ -24,5 +21,7 @@ if( in_array($page, array_keys($admin)) )
 		$html = '<title>Oops!!!, Page Not Found</title>';
 		$html .= '<body><h2>404</h2><p>Page Not Found</p></body>';
 		die($html);
+	}else{
+		require $file404;
 	}
 } 
