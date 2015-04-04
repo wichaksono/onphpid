@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	# jika sistem ini berada di subfolder seperti localhost/onphpid
+	# maka RewriteBase harus diset sesuai nama subfolder, yaitu : /onphpid/
+	
+	# jika anda menggunakanya di domain utama set RewriteBase dengan /
+	# RewriteBase /
+
+	RewriteBase /onphpid/
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+
+</IfModule>
