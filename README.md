@@ -14,3 +14,6 @@ sebuah website
 -config.php<br>
 -pages.php<br>
 -.htaccess<br>
+
+# Tutorial 
+see -> <a href="http://onphpid.com/2015/04/onphpid-simple-direktori-web-aplikasi.html"> Onphpid.com</a>
